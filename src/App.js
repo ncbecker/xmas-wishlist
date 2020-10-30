@@ -21,6 +21,7 @@ function App() {
 
   return (
     <main>
+      <header>MY X-MAS WISHLIST 2020</header>
       <CreateInput wish={wish} handleSubmit={handleSubmit} setWish={setWish} />
       <Wishlist wishlistItems={currentWishes} />
     </main>

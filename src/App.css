@@ -3,3 +3,13 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  height: 60px;
+}

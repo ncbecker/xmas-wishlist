@@ -6,4 +6,12 @@
   padding: 10px;
   color: white;
   border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.checkbox {
+  margin: 5px;
+  font-size: 30px;
 }
