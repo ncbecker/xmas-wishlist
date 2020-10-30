@@ -11,5 +11,11 @@ main {
 }
 
 header {
-  height: 60px;
+  height: 80px;
+  width: 100vw;
+  background: rgb(70, 14, 14);
+  color: white;
+  text-align: center;
+  padding-top: 20px;
+  font-size: 1.5rem;
 }
