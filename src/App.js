@@ -1,7 +1,12 @@
 import "./App.css";
+import CreateInput from "./components/Input";
 
 function App() {
-  return <></>;
+  return (
+    <main>
+      <CreateInput />
+    </main>
+  );
 }
 
 export default App;
