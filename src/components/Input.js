@@ -7,12 +7,22 @@ export default function CreateInput() {
 
   function handleSubmit(event) {
     event.preventDefault();
-    console.log(wish);
+    let wishes = null;
+    try {
+      wishes = JSON.parse(localStorage.getItem("wishes")) || [];
+    } catch (error) {
+      console.error(error);
+      wishes = [];
+    }
+    const newWishes = [...wishes, wish];
+    localStorage.setItem("wishes", JSON.stringify(newWishes));
+    setWish("");
   }
 
   return (
     <form onSubmit={handleSubmit}>
       <input
+        id="addwish"
         placeholder={"Tell me your wish"}
         type="text"
         value={wish}
