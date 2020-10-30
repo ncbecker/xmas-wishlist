@@ -1,0 +1,5 @@
+body {
+  background: linear-gradient(135deg, #8f0000 0%, #4d0f0f 100%);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
