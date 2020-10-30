@@ -3,7 +3,7 @@ import "./WishlistItem.css";
 import PropTypes from "prop-types";
 
 export default function WishlistItem({ wish }) {
-  return <li className="List-item">{wish}</li>;
+  return <li className="list-item">{wish}</li>;
 }
 
 WishlistItem.propTypes = {

@@ -1,0 +1,9 @@
+.list-item {
+  list-style-type: none;
+  background: rgb(2, 31, 2);
+  width: 300px;
+  margin: 5px;
+  padding: 10px;
+  color: white;
+  border-radius: 10px;
+}
