@@ -1,27 +1,11 @@
 import "./Input.css";
-// import giftbox from "./gift-box.svg";
-import React from "react";
+import giftbox from "./gift-box.svg";
 
-export default function CreateInput() {
-  const [wish, setWish] = React.useState("");
-
-  function handleSubmit(event) {
-    event.preventDefault();
-    let wishes = null;
-    try {
-      wishes = JSON.parse(localStorage.getItem("wishes")) || [];
-    } catch (error) {
-      console.error(error);
-      wishes = [];
-    }
-    const newWishes = [...wishes, wish];
-    localStorage.setItem("wishes", JSON.stringify(newWishes));
-    setWish("");
-  }
-
+export default function CreateInput({ handleSubmit, wish, setWish }) {
   return (
-    <form onSubmit={handleSubmit}>
+    <form className="input-form" onSubmit={(event) => handleSubmit(event)}>
       <input
+        required
         id="addwish"
         placeholder={"Tell me your wish"}
         type="text"
@@ -29,8 +13,7 @@ export default function CreateInput() {
         onChange={(event) => setWish(event.target.value)}
       />
       <button>
-        🎁
-        {/* <img src={giftbox} alt={"Gift Box"} /> */}
+        <img src={giftbox} alt={"Gift Box"} />
       </button>
     </form>
   );

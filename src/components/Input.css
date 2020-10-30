@@ -1,0 +1,33 @@
+.input-form img {
+  height: 100%;
+  width: 100%;
+}
+
+.input-form button {
+  height: 48px;
+  width: 48px;
+  border-radius: 48px;
+  border: none;
+  padding: 12px;
+  transition: 0.6s;
+}
+
+.input-form button:hover {
+  transform: scale(1.2);
+  box-shadow: 0px 8px 16px -8px rgb(88, 8, 8);
+}
+
+.input-form input {
+  margin-right: 10px;
+  height: 48px;
+  width: 200px;
+  border-radius: 10px;
+  border: none;
+}
+
+.input-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+}

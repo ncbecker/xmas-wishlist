@@ -1,0 +1,21 @@
+body {
+  background: linear-gradient(135deg, #8f0000 0%, #4d0f0f 100%);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  height: 80px;
+  width: 100vw;
+  background: rgb(70, 14, 14);
+  color: white;
+  text-align: center;
+  padding-top: 20px;
+  font-size: 1.5rem;
+}
