@@ -1,7 +1,9 @@
 import "./App.css";
+import "./Snowfall.css";
 import CreateInput from "./components/Input";
 import React, { useState } from "react";
 import Wishlist from "./components/Wishlist";
+import Logo from "./components/assets/logo.svg";
 
 function App() {
   const [currentWishes, setCurrentWishes] = useState(
@@ -19,12 +21,34 @@ function App() {
     setCurrentWishes(newWishes);
   }
 
+  function handleClickRemove(wishRemoved) {
+    const newWishes = currentWishes.filter((item) => item !== wishRemoved);
+    localStorage.setItem("wishes", JSON.stringify(newWishes));
+    setCurrentWishes(newWishes);
+  }
+
   return (
-    <main>
-      <header>🎄 MY X-MAS WISHLIST 2020</header>
-      <CreateInput wish={wish} handleSubmit={handleSubmit} setWish={setWish} />
-      <Wishlist wishlistItems={currentWishes} />
-    </main>
+    <div>
+      <header>
+        <div className="logo-form-container">
+          <a href="./index.html">
+            <img className="logo" src={Logo} alt="logo" />
+          </a>
+          <CreateInput
+            wish={wish}
+            handleSubmit={handleSubmit}
+            setWish={setWish}
+          />
+        </div>
+      </header>
+      <main>
+        <Wishlist
+          wishlistItems={currentWishes}
+          onClickRemove={handleClickRemove}
+        />
+      </main>
+      <footer className="Snowfall"></footer>
+    </div>
   );
 }
 
