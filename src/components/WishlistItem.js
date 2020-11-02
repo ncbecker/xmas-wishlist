@@ -5,7 +5,7 @@ import editIcon from "./assets/Edit.svg";
 import checkIcon from "./assets/Check.svg";
 import cancelIcon from "./assets/Cancel.svg";
 
-export default function WishlistItem({ wish }) {
+export default function WishlistItem({ wish, onClickRemove }) {
   return (
     <li className="list-item">
       {wish}
@@ -16,7 +16,11 @@ export default function WishlistItem({ wish }) {
         <button className="list-btn" id="done">
           <img className="list-btn-symbol check" src={checkIcon} alt="check" />
         </button>
-        <button className="list-btn" id="cancel">
+        <button
+          className="list-btn"
+          id="cancel"
+          onClick={() => onClickRemove(wish)}
+        >
           <img
             className="list-btn-symbol cancel"
             src={cancelIcon}

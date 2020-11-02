@@ -21,6 +21,12 @@ function App() {
     setCurrentWishes(newWishes);
   }
 
+  function handleClickRemove(wishRemoved) {
+    const newWishes = currentWishes.filter((item) => item !== wishRemoved);
+    localStorage.setItem("wishes", JSON.stringify(newWishes));
+    setCurrentWishes(newWishes);
+  }
+
   return (
     <div>
       <header>
@@ -36,7 +42,10 @@ function App() {
         </div>
       </header>
       <main>
-        <Wishlist wishlistItems={currentWishes} />
+        <Wishlist
+          wishlistItems={currentWishes}
+          onClickRemove={handleClickRemove}
+        />
       </main>
       <footer className="Snowfall"></footer>
     </div>
